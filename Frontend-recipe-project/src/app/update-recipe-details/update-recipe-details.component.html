@@ -1,0 +1,14 @@
+<nav>
+    <ul>
+        <li><button [routerLink]="['/details/'+recipe.recipeName]" class="btn btn-dark">Back</button></li>
+    </ul>
+</nav>
+<form (ngSubmit)="onSubmit()">
+<div class="form-group">
+    <h6 for="numberOfPeople">Number Of People prefers:</h6>
+    <input type="number" id="numberOfPeople" [(ngModel)]="recipe.numberOfPeople" name="numberOfPeople"><br><br>
+</div>
+<div>
+    <button class="btn btn-success " type="submit">Update Recipe</button>
+</div>
+</form>

@@ -1,0 +1,72 @@
+<nav>
+    <ul>
+        <li><button routerLink="" class="btn btn-dark">Back</button>&nbsp;
+            <button (click)="deleteRecipe(recipe.recipeName)" class="btn btn-danger">Delete</button>&nbsp;
+            <button (click)="updateRecipe(recipe.recipeName)" class="btn btn-success">Update</button>
+        </li>
+    </ul>
+</nav>
+<div class="row">
+    <div class="card-deck">
+        <div class="text-left text-black">
+            <table>
+                <tr>
+                    <th>
+                        <span class="text-muted">Recipe Name:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </th>
+                    <td>
+                        {{recipe?.recipeName}}
+                    </td>
+                </tr><br>
+                <tr>
+                    <th>
+                        <span class="text-muted">Recipe Id:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </th>
+                    <td>
+                        {{recipe?.recipeNumber}}
+                    </td>
+                </tr><br>
+                <tr>
+                    <th>
+                        <span class="text-muted">Creation Date:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </th>
+                    <td>
+                        {{recipe?.creationDate}}
+                    </td>
+                </tr><br>
+                <tr>
+                    <th>
+                        <span class="text-muted">Dish Type:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </th>
+                    <td>
+                        {{recipe?.dishType}}
+                    </td>
+                </tr><br>
+                <tr>
+                    <th>
+                        <span class="text-muted">Number Of People Preferred:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </th>
+                    <td>
+                        {{recipe?.numberOfPeople}}
+                    </td>
+                </tr><br>
+                <tr>
+                    <th>
+                        <span class="text-muted">Ingredients:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </th>
+                    <td>
+                        {{recipe?.ingredients}}
+                    </td>
+                </tr><br>
+                <tr>
+                    <th>
+                        <span class="text-muted">Instructions:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </th>
+                    <td>
+                        {{recipe?.instructions}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

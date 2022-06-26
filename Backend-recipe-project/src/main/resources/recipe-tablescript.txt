@@ -1,0 +1,117 @@
+drop database if exists recipe_db;
+create database recipe_db;
+use  recipe_db;
+
+
+create table recipe(
+   recipe_number int auto_increment,
+   recipe_name varchar(1000),
+   creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+   dish_type varchar(20) NOT NULL,
+   number_of_people int,
+   ingredients varchar(1000),
+   instructions varchar(2000),
+   constraint ps_recipe_number_pk primary key (recipe_number)
+);
+
+insert into recipe (recipe_number, recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+1,
+“Ghee Rice”,
+“Vegetarian”,
+708,
+“Basmati Rice/ Zeera Rice, Onion, Ginger Garlic Paste, Green chilies, Whole Garam Masala , Cashew nuts, Raisins, Coriander leaves, Ghee ”,
+“Wash and soak the rice with enough water. Heat 3-4 tbsp of ghee in a pressure cooker or any heavy bottomed pot. First add the cashew nuts, toast till golden brown and remove from ghee.Now add the whole garam masala and saute for a minute. Now add the ginger garlic paste and slit green chilies. Drain the rice and add to this. Fry in ghee for 4-5 minutes till you get a nice aroma. Add the hot water and required salt. Let it come to a boil again and then reduce the flame. Cover with a lid and cook for 20 minutes. If using pressure cooker, cook for just 1 whistle and switch off. While this is getting cooked, heat ghee in a frying pan and add sliced onions. Fry it on medium flame for 10 minutes till it becomes brown in colour. Do not burn it. (Optionally, you can also saute some finely chopped carrots in some ghee too. When the rice is cooked, open the lid, add the fried onions on top. Also add finely chopped coriander leaves and toasted cashews on top. If you are using carrots, add them too. Add 1 tbsp of fresh ghee on top. Cover with a lid and keep in covered for another 5 minutes. This will help blend the flavours. Now gently fluff up the rice and enjoy.”
+);
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Lime Water”,
+“Vegetarian”,
+100,
+“Water, Lime, Sugar/Honey”,
+“Cut the lime into two slices and squeeze the lime into a empty glasses using squeezer. Remove all the seeds and pour sufficient amount of water. Finally, add honey/sugar.”
+);
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Biryani”,
+91,
+“Non_Vegetarian”,
+“4 cups basmati rice, 3 tablespoons Ginger & garlic paste, 5 green chilies (or less, depending on taste), 1 onion finely chopped, 2 tomato finely chopped, 2 teaspoons ea. cinnamon, cloves, cardamom, Cashew nuts4 tablespoons oil or ghee, 2 cups carrot, peas, & finely cut beans, 2 teaspoons Garam Masala powder, 3 teaspoons chili powder (or less, depending on taste), Mint leaves & coriander leaves (handful), Juice of ½ lemon”,
+“To make delightful chicken biryani, soak saffron in water to prepare saffron water. Next, mix kewra drops in water and mix well to make kewra water. In the meanwhile, heat refined oil in a deep bottomed pan. Once the oil is hot enough. Add cumin seeds, bay leaf, green cardamom, black cardamom, cloves in it, and saute for about a minute. Then, add chopped onion in it and saute until pink. Now, add chicken into it with slit green chillies, turmeric, salt to taste, ginger garlic paste, red chilli powder, and green chilli paste. Mix well all the spices and cook for 2-3 minutes. Then, add hung curd into it. Turn the flame to medium again and add garam masala in it along with ginger julienned, coriander and mint leaves. Add kewra water, rose water and saffron water in it. Cook till the chicken is tender. Then add 1 cup cooked rice and spread evenly. Then add saffron water and pour ghee over it. Cook for 15-20 minutes with closed lid and garnish with 1 tbsp fried onions and coriander leaves. Serve hot chicken biryani.”
+);
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Butter Chicken”,
+“Non_Vegetarian”,
+87,
+“2 tsp oil, 2 to taste butter cubes, 3 gram cloves,1 Cinnamon sticks, sliced, 1 tsp mace, 7 Cardamom, 4 Tomatoes, chopped, 1 tsp garlic, 1 tsp ginger, 2 butter cubes, 1 tsp ginger garlic paste,1 1/2 tsp red chilli powder, 1 tsp kasuri methi, 2 tsp honey, 1 green chilli, 2 tsp cardamom powder,1 tbsp cream.”,
+“Heat 2 tsp of oil in a pan with butter. Add cloves, cinnamon stick, mace and cardamom. Saute and then add chopped tomatoes, garlic and ginger. Mix well and then grind well. In another pan, heat another two cubes of butter, along with ginger garlic paste. Add the tomato puree made from the mixture. Now add red chilli powder, kasuri methi, honey and finally the roasted chicken pieces. Let it simmer. Add green chilli, cardamom powder and cream. Mix well. Serve with a teaspoon of cream over.”
+);
+
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Chicken Curry”,
+“Non_Vegetarian”,
+897,
+“raw chicken, red chilli powder, ginger and garlic paste, salt, lemon juice, curd, garam masala , kasuri methi , mustard oil , oil, butter cubes, cloves, Cinnamon sticks, mace, Cardamom, Tomatoes, garlic, ginger, butter cubes, ginger garlic paste, red chilli powder, kasuri methi, honey, green chilli, cardamom powder, cream”,
+“Heat 2 tsp of oil in a pan with butter. Add cloves, cinnamon stick, mace and cardamom. Saute and then add chopped tomatoes, garlic and ginger. Mix well and then grind well. In another pan, heat another two cubes of butter, along with ginger garlic paste. Add the tomato puree made from the mixture. Now add red chilli powder, kasuri methi, honey and finally the roasted chicken pieces. Let it simmer. Add green chilli, cardamom powder and cream. Mix well. Serve with a teaspoon of cream over.”
+);
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Lime Soda”,
+“Vegetarian”,
+145,
+“Soda, Lime, Sugar/Honey”,
+“Cut the lime into two slices and squeeze the lime into a empty glasses using squeezer. Remove all the seeds and pour sufficient amount of Soda. Finally, add honey/sugar.”
+);
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Butter Milk”,
+“Vegetarian”,
+104,
+“Curd, Water, Lime, Salt”,
+“Cut the lime into two slices and squeeze the lime into a empty glasses using squeezer. Remove all the seeds and pour sufficient amount of water. Mix necessary amount of curd. Finally, add salt and stir.”
+);
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Kadai Chicken”,
+“Non_Vegetarian”,
+190,
+“2 tsp oil, 2 to taste butter cubes, 3 gram cloves,1 Cinnamon sticks, sliced, 1 tsp mace, 7 Cardamom, 4 Tomatoes, chopped, 1 tsp garlic, 1 tsp ginger, 2 butter cubes, 1 tsp ginger garlic paste,1 1/2 tsp red chilli powder, 1 tsp kasuri methi, 2 tsp honey, 1 green chilli, 2 tsp cardamom powder,1 tbsp cream.”,
+“Heat 2 tsp of oil in a pan with butter. Add cloves, cinnamon stick, mace and cardamom. Saute and then add chopped tomatoes, garlic and ginger. Mix well and then grind well. In another pan, heat another two cubes of butter, along with ginger garlic paste. Add the tomato puree made from the mixture. Now add red chilli powder, kasuri methi, honey and finally the roasted chicken pieces. Let it simmer. Add green chilli, cardamom powder and cream. Mix well. Serve with a teaspoon of cream over.”
+);
+
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Chicken Gravy”,
+“Non_Vegetarian”,
+767,
+“raw chicken, red chilli powder, ginger and garlic paste, salt, lemon juice, curd, garam masala , kasuri methi , mustard oil , oil, butter cubes, cloves, Cinnamon sticks, mace, Cardamom, Tomatoes, garlic, ginger, butter cubes, ginger garlic paste, red chilli powder, kasuri methi, honey, green chilli, cardamom powder, cream”,
+“Heat 2 tsp of oil in a pan with butter. Add cloves, cinnamon stick, mace and cardamom. Saute and then add chopped tomatoes, garlic and ginger. Mix well and then grind well. In another pan, heat another two cubes of butter, along with ginger garlic paste. Add the tomato puree made from the mixture. Now add red chilli powder, kasuri methi, honey and finally the roasted chicken pieces. Let it simmer. Add green chilli, cardamom powder and cream. Mix well. Serve with a teaspoon of cream over.”
+);
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Zeera Rice”,
+“Vegetarian”,
+657,
+“Basmati Rice/ Zeera Rice, Onion, Ginger Garlic Paste, Green chilies, Whole Garam Masala , Cashew nuts, Raisins, Coriander leaves, Ghee ”,
+“Wash and soak the rice with enough water. Heat 3-4 tbsp of ghee in a pressure cooker or any heavy bottomed pot. First add the cashew nuts, toast till golden brown and remove from ghee.Now add the whole garam masala and saute for a minute. Now add the ginger garlic paste and slit green chilies. Drain the rice and add to this. Fry in ghee for 4-5 minutes till you get a nice aroma. Add the hot water and required salt. Let it come to a boil again and then reduce the flame. Cover with a lid and cook for 20 minutes. If using pressure cooker, cook for just 1 whistle and switch off. While this is getting cooked, heat ghee in a frying pan and add sliced onions. Fry it on medium flame for 10 minutes till it becomes brown in colour. Do not burn it. (Optionally, you can also saute some finely chopped carrots in some ghee too. When the rice is cooked, open the lid, add the fried onions on top. Also add finely chopped coriander leaves and toasted cashews on top. If you are using carrots, add them too. Add 1 tbsp of fresh ghee on top. Cover with a lid and keep in covered for another 5 minutes. This will help blend the flavours. Now gently fluff up the rice and enjoy.”
+);
+
+insert into recipe ( recipe_name, dish_type, number_of_people, ingredients, instructions ) values (
+“Tamarind Rice”,
+“Vegetarian”,
+450,
+“Basmati Rice/ Zeera Rice, Onion, Ginger Garlic Paste, Green chilies, Whole Garam Masala , Cashew nuts, Raisins, Coriander leaves, Ghee ”,
+“Wash and soak the rice with enough water. Heat 3-4 tbsp of ghee in a pressure cooker or any heavy bottomed pot. First add the cashew nuts, toast till golden brown and remove from ghee.Now add the whole garam masala and saute for a minute. Now add the ginger garlic paste and slit green chilies. Drain the rice and add to this. Fry in ghee for 4-5 minutes till you get a nice aroma. Add the hot water and required salt. Let it come to a boil again and then reduce the flame. Cover with a lid and cook for 20 minutes. If using pressure cooker, cook for just 1 whistle and switch off. While this is getting cooked, heat ghee in a frying pan and add sliced onions. Fry it on medium flame for 10 minutes till it becomes brown in colour. Do not burn it. (Optionally, you can also saute some finely chopped carrots in some ghee too. When the rice is cooked, open the lid, add the fried onions on top. Also add finely chopped coriander leaves and toasted cashews on top. If you are using carrots, add them too. Add 1 tbsp of fresh ghee on top. Cover with a lid and keep in covered for another 5 minutes. This will help blend the flavours. Now gently fluff up the rice and enjoy.”
+);
+
+
+
+commit;
+select * from recipe;
+select * from customer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

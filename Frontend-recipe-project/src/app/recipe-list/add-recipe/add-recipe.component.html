@@ -1,0 +1,42 @@
+<nav>
+    <ul>
+        <li><button routerLink="" class="btn btn-dark">Back</button></li>
+    </ul>
+</nav>
+<h1 style="text-align: center;">Add New Recipe</h1>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <h6 for="recipeName">Recipe Name:</h6>
+        <input type="text" id="recipeName"
+            [(ngModel)]="recipe.recipeName" name="recipeName" placeholder="Recipe Name">
+    </div><br><br>
+    <div class="form-group">
+        <h6 for="creationDate">Creation Date:</h6>
+        <input type="datetime-local" class="form-group" id="creationDate" [(ngModel)]="recipe.creationDate"
+            name="creationDate"><br><br>
+    </div>
+    <div class="form-group">
+        <h6 for="dishType">Dish Type:</h6>
+        <input type="radio" value="Vegetarian" id="dishType" [(ngModel)]="recipe.dishType" name="dishType">
+        <label for="dishType">&nbsp;Vegetarian</label><br>
+        <input type="radio" value="Non_Vegetarian" id="dishType" [(ngModel)]="recipe.dishType" name="dishType">
+        <label for="dishType">&nbsp; Non_Vegetarian</label><br><br>
+    </div>
+    <div class="form-group">
+        <h6 for="numberOfPeople">Number Of People prefers:</h6>
+        <input type="number" id="numberOfPeople" [(ngModel)]="recipe.numberOfPeople" name="numberOfPeople"><br><br>
+    </div>
+    <div class="form-group">
+        <h6 for="ingredients">Ingredients:</h6>
+        <textarea class="form-control" [(ngModel)]="recipe.ingredients" name="ingredients" rows="" column="10"
+            placeholder="Enter Suitable Ingredients"></textarea>
+    </div><br><br>
+    <div class="form-group">
+        <h6 for="instructions">Instructions:</h6>
+        <textarea class="form-control" [(ngModel)]="recipe.instructions" name="instructions" rows="5" column="10"
+            placeholder="Enter Method Of Preparation"></textarea>
+    </div><br>
+    <div>
+        <button class="btn btn-success " type="submit">Add Recipe</button>
+    </div>
+</form>
